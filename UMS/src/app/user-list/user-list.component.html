@@ -1,0 +1,57 @@
+
+<table class="tbl">
+  <tr>
+    <td class="p-4"><button class="btn btn-primary" (click)="onIncrement()">Increment</button></td>
+    <td class="p-4">{{rollNumber}}</td>
+    <td class="p-4"><button class="btn btn-primary" (click)="onDecrement()">Decrement</button></td>
+  </tr>
+  <tr>
+    <td>
+      <select name="" id="" class="form-select" (change)="onCityChange()">
+        <option value="">---Select---</option>
+        <option value="Pune">Pune</option>
+        <option value="Solapur">Solapur</option>
+        <option value="Nashik">Nashik</option>
+        <option value="Nagpur">Nagpur</option>
+      </select>
+  </td>
+  </tr>
+</table>
+<br><br>
+<div class="container justify-content-center">
+  <div class="row ">
+    <h3 class="text-warning ">Calculator</h3>
+    <div class="col-md-8 shadow-lg p-4 mb-4 bg-white text center ">
+      <div class="row">
+          <div class="col-md-4">
+            <input type="text" [(ngModel)]="num1" class="form-control " placeholder="">
+          </div>
+          <div class="col-md-4">
+            <input type="text" [(ngModel)]="num2" class="form-control" placeholder="">
+          </div>
+          <div class="col-md-4">
+            <input type="text" [(ngModel)]="result" class="form-control" placeholder="">
+          </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col-md-2">
+          <button (click)="onAdd()" class="btn btn-warning p-4 mx-1 my-1">+</button>
+        </div>
+        <div class="col-md-2">
+          <button (click)="onSubtract()" class="btn btn-warning p-4 mx-1 my-1">-</button>
+        </div>
+        <div class="col-md-2">
+          <button (click)="onMultiply()" class="btn btn-warning p-4 mx-1 my-1">*</button>
+        </div>
+        <div class="col-md-2">
+          <button (click)="onDivide()" class="btn btn-warning p-4 mx-1 my-1">/</button>
+        </div>
+        <div class="col-md-2">
+            <button (click)="clearForm()" class="btn btn-warning p-4 mx-1 my-1">Clear</button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

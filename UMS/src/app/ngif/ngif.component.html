@@ -1,0 +1,62 @@
+<div class="row">
+  <div class="col-md-3">
+    <div class="bg-primary p-3" *ngIf="isDiv1Visible">
+      Div 1
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="bg-secondary p-3" *ngIf="name == surname">
+      Div 2
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="bg-success p-3" id="div3">
+      Div 3
+    </div>
+  </div>
+  <div class="col-md-3">
+    <div class="bg-danger p-3" *ngIf="isDiv4Visible">
+      Div 4
+    </div>
+  </div>
+</div>
+<div class="row mt-3">
+  <div class="col-md-3">
+    {{isDiv1Visible}}
+    <button class="btn btn-danger" (click)="hideDiv1()">Hide</button>
+    <button class="btn btn-success" (click)="showDiv1()">Show</button>
+  </div>
+  <div class="col-md-3">
+
+  </div>
+  <div class="col-md-3">
+    <button class="btn btn-danger" (click)="hideDiv3()">Hide</button>
+    <button class="btn btn-success" (click)="showDiv3()">Show</button>
+  </div>
+  <div class="col-md-3">
+    <button class="btn btn-danger" (click)="toggleDiv4()">Hide / show</button>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-12" *ngIf="isListView == true">
+    <div class="card">
+      <div class="header bg-primary">
+        User List <button (click)="onAdd()">Add</button>
+      </div>
+      <div class="card-body">
+        Table
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12" *ngIf="isListView == false">
+    <div class="card">
+      <div class="header bg-primary">
+        Add User <button (click)="goBack()">Go Back</button>
+      </div>
+      <div class="card-body">
+        User Form
+      </div>
+    </div>
+  </div>
+</div>

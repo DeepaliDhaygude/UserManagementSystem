@@ -1,0 +1,71 @@
+<div class="row">
+  <h4 class="text-success">Date - 20/09/2022 <br>
+    Topic - ngFor on list, label, dropdown, table, ngFor with array and objects</h4>
+  <div class="col-md-3">
+    <ul>
+      <b>On li</b>
+      <li *ngFor="let city of cityArray">
+        {{city}}
+      </li>
+    </ul>
+  </div>
+  <div class="col-md-3">
+    <b>On label</b><br>
+    <label *ngFor="let cityname of cityArray">{{cityname}},   </label>
+  </div>
+  <div class="col-md-3">
+    <b>On dropdown list</b><br>
+    <select class="form-control">
+      <option *ngFor="let myCity of cityArray">{{myCity}}</option>
+    </select>
+  </div>
+  <div class="col-md-3">
+    <div class="row">
+      <div class="col-md-6">
+        <input type="text" class="form-control" [(ngModel)]="city" placeholder="City Name">
+      </div>
+      <div class="col-md-6">
+        <button class="btn btn-warning btn-sm" (click)="onAddCity()">Add</button>
+      </div>
+    </div>
+    <b>On table</b><br>
+    <table class="table border table-bordered">
+      <thead>
+        <tr>
+          <th>Sr No.</th>
+          <th>City Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let city of cityArray; let sr = index">
+          <td>{{sr+1}}</td>
+          <td>{{city}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <table class="table border table-bordered">
+      <thead>
+
+        <tr>
+          <th>Sr No.</th>
+          <th>Name</th>
+          <th>City</th>
+          <th>Mobile</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of studentList; let mySr = index">
+          <td>{{mySr+1}}</td>
+          <td>{{student.name}}</td>
+          <td>{{student.city}}</td>
+          <td>{{student.mobile}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

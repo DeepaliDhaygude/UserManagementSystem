@@ -1,0 +1,18 @@
+label{
+  font-size: 12px;
+  }
+  .bgGray{
+      background-color:lightgray;
+
+  }
+  .cancelBtn
+  {
+      background-color:gray;
+  }
+  .saveBtn
+  {
+      background-color: darkgray;
+  }
+.myTheme{
+  background-color:gray;
+}
